@@ -3,10 +3,9 @@ import styles from "./PreviousWork.module.scss";
 
 const PreviousWork = ({ className }) => {
 	return (
-		<section
-			id="prev"
-			className={`${styles.prev} ${className ?? ""}`}
-		></section>
+		<section id="prev" className={`${styles.prev} ${className ?? ""}`}>
+			Previous Work
+		</section>
 	);
 };
 

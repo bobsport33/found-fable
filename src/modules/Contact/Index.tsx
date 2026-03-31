@@ -6,7 +6,9 @@ const Contact = ({ className }) => {
 		<section
 			id="Contact"
 			className={`${styles.contact} ${className ?? ""}`}
-		></section>
+		>
+			Contact
+		</section>
 	);
 };
 
