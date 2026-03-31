@@ -70,10 +70,15 @@
 	box-sizing: border-box;
 }
 
+* {
+	margin: 0;
+}
+
 html,
 body {
 	height: 100%;
 	scroll-behavior: smooth;
+	background-color: #fffaf3;
 }
 
 h1,
@@ -90,4 +95,9 @@ h6 {
 
 p {
 	font-family: "Montsterrat, sans-serif";
+}
+
+.section {
+	position: relative;
+	z-index: 1;
 }

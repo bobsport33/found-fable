@@ -1,0 +1,17 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	&__logo {
+		height: auto;
+		width: 500px;
+
+		& svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
