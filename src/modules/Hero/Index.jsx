@@ -1,6 +1,7 @@
 import React from "react";
 import FoundFableLogo from "../../assets/svgs/LogoTest.svg?react";
 import styles from "./Hero.module.scss";
+import Button from "../../components/Button/Index";
 
 const Hero = ({ className }) => {
 	return (
@@ -18,7 +19,10 @@ const Hero = ({ className }) => {
 				shape it and make it yours.
 			</h3>
 			{/* button */}
-			<button>Get in touch</button>
+			{/* <button>Get in touch</button> */}
+			<Button variant="secondary" theme="green">
+				Get in touch
+			</Button>
 		</section>
 	);
 };

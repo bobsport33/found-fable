@@ -1,6 +1,7 @@
 import "./App.css";
 
 import AnimatedBackground from "./components/AnimatedBackground/Index";
+import About from "./modules/About/Index";
 import Contact from "./modules/Contact/Index";
 import Footer from "./modules/Footer/Index";
 import Hero from "./modules/Hero/Index";
@@ -13,6 +14,7 @@ function App() {
 			<AnimatedBackground />
 			<Hero className="section" />
 			<Services className="section" />
+			<About className="section" />
 			<PreviousWork className="section" />
 			<Contact className="section" />
 			<Footer />
