@@ -1,7 +1,6 @@
 .prev {
 	height: 100vh;
 }
-
 /* PreviousWork.module.css */
 
 .previousWork {
@@ -49,15 +48,12 @@
 }
 
 /* ── Alternating Layout ── */
-/* even: image left, content right */
 .even .imageWrapper {
 	order: 1;
 }
 .even .content {
 	order: 2;
 }
-
-/* odd: content left, image right */
 .odd .imageWrapper {
 	order: 2;
 }
@@ -75,7 +71,6 @@
 	.odd .imageWrapper {
 		order: 1;
 	}
-
 	.even .content,
 	.odd .content {
 		order: 2;
@@ -151,6 +146,32 @@
 	border-radius: 100px;
 	padding: 0.35rem 0.85rem;
 	white-space: nowrap;
+}
+
+/* ── Client List ── */
+.clientList {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.clientHeadline {
+	font-family: "Gotu", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--color-peach-500);
+	letter-spacing: 0.03em;
+}
+
+.clients {
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.85rem;
+	line-height: 1.8;
+	color: var(--color-neutral-600);
+}
+
+.separator {
+	color: var(--color-neutral-400);
 }
 
 /* ── CTA ── */
