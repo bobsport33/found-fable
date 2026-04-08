@@ -1,4 +1,3 @@
-import React from "react";
 import FoundFableLogo from "../../assets/svgs/LogoTest.svg?react";
 import styles from "./Hero.module.scss";
 import Button from "../../components/Button/Index";
