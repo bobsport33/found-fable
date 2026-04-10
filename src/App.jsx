@@ -10,7 +10,7 @@ import Services from "./modules/Services/Index";
 
 function App() {
 	return (
-		<div>
+		<div className="body-container">
 			<AnimatedBackground />
 			<Hero className="section" />
 			<Services className="section" />
