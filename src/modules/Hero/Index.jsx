@@ -3,6 +3,9 @@ import styles from "./Hero.module.scss";
 import Button from "../../components/Button/Index";
 
 const Hero = ({ className }) => {
+	const handleScroll = () => {
+		document.getElementById("contact").scrollIntoView();
+	};
 	return (
 		<section id="hero" className={`${styles.hero} ${className ?? ""}`}>
 			{/* Logo */}
@@ -19,7 +22,7 @@ const Hero = ({ className }) => {
 			</h3>
 			{/* button */}
 			{/* <button>Get in touch</button> */}
-			<Button variant="secondary" theme="green">
+			<Button variant="secondary" theme="green" onClick={handleScroll}>
 				Get in touch
 			</Button>
 		</section>

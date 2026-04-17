@@ -42,7 +42,7 @@ const Contact = () => {
 	};
 
 	return (
-		<section className={`section ${styles.contact}`}>
+		<section className={`section ${styles.contact}`} id="contact">
 			<div className={styles.inner}>
 				{/* ── Left: Copy ── */}
 				<div className={styles.copy}>

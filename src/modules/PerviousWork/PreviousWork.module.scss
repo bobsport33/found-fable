@@ -4,7 +4,7 @@
 /* PreviousWork.module.css */
 
 .previousWork {
-	max-width: 1200px;
+	max-width: 80%;
 	margin: 0 auto;
 	padding: 5rem 2rem;
 	background-color: transparent;
@@ -86,13 +86,9 @@
 	min-height: 300px;
 }
 
-.imagePlaceholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
+.image {
 	height: 100%;
-	padding: 2rem;
+	width: 100%;
 }
 
 .placeholderText {

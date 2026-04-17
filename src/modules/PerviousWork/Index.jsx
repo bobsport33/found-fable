@@ -5,6 +5,7 @@ import Button from "../../components/Button/Index";
 const work = [
 	{
 		id: 1,
+		image: "/Primary_source.png",
 		company: "Primary Source Brooklyn",
 		pills: ["Brand Voice", "Founder Narrative", "Store Communications"],
 		cta: "Meet the brand",
@@ -13,6 +14,7 @@ const work = [
 	},
 	{
 		id: 2,
+		image: "/DeMasiStrength.png",
 		company: "DeMasi Strength & Conditioning",
 		pills: ["Brand Design System", "Logo", "Concept Strategy"],
 		cta: "Go behind the scenes",
@@ -21,6 +23,7 @@ const work = [
 	},
 	{
 		id: 3,
+		image: "/portfolio.png",
 		company: "My Creative Portfolio",
 		pills: [],
 		clientList: {
@@ -44,7 +47,16 @@ const work = [
 	}
 ];
 
-const WorkItem = ({ company, pills, clientList, cta, link, newTab, index }) => {
+const WorkItem = ({
+	company,
+	image,
+	pills,
+	clientList,
+	cta,
+	link,
+	newTab,
+	index
+}) => {
 	const isEven = index % 2 === 0;
 
 	return (
@@ -53,9 +65,7 @@ const WorkItem = ({ company, pills, clientList, cta, link, newTab, index }) => {
 		>
 			{/* Image / Placeholder */}
 			<div className={styles.imageWrapper}>
-				<div className={styles.imagePlaceholder}>
-					<span className={styles.placeholderText}>{company}</span>
-				</div>
+				<img className={styles.image} src={image} alt={company} />
 			</div>
 
 			{/* Content */}
