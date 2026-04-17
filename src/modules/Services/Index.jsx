@@ -67,35 +67,38 @@ const Services = ({ className }) => {
 			id="services"
 			className={`${styles.services} ${className ?? ""}`}
 		>
-			{/* Header */}
-			<div className={styles.header}>
-				<h2 className={styles.heading}>Creative Services</h2>
-				<p className={styles.intro}>
-					New business getting started from scratch? Let's build
-					something together. Established brand needing a creative
-					lead on contract? I can tap right in. Here's what I can do
-					for you:
-				</p>
-			</div>
+			{/* Single connected wrapper */}
+			<div className={styles.panel}>
+				{/* Header */}
+				<div className={styles.header}>
+					<h2 className={styles.heading}>Creative Services</h2>
+					<p className={styles.intro}>
+						New business getting started from scratch? Let's build
+						something together. Established brand needing a creative
+						lead on contract? I can tap right in. Here's what I can
+						do for you:
+					</p>
+				</div>
 
-			{/* Service Cards */}
-			<div className={styles.grid}>
-				{services.map((service) => (
-					<ServiceCard key={service.id} {...service} />
-				))}
-			</div>
+				{/* Service Cards */}
+				<div className={styles.grid}>
+					{services.map((service) => (
+						<ServiceCard key={service.id} {...service} />
+					))}
+				</div>
 
-			{/* Footer Line */}
-			<div className={styles.footer}>
-				<p className={styles.footerText}>
-					Don't see what you need? I'm good at a lot of things not
-					listed here (non-profit guides, UX strategy, demystifying
-					marketing buzzwords, knowing every Quizno's jingle ever
-					made).{" "}
-					<span className={styles.highlight}>
-						Let's talk through it.
-					</span>
-				</p>
+				{/* Footer Line */}
+				<div className={styles.footer}>
+					<p className={styles.footerText}>
+						Don't see what you need? I'm good at a lot of things not
+						listed here (non-profit guides, UX strategy,
+						demystifying marketing buzzwords, knowing every Quizno's
+						jingle ever made).{" "}
+						<span className={styles.highlight}>
+							Let's talk through it.
+						</span>
+					</p>
+				</div>
 			</div>
 		</section>
 	);
