@@ -63,7 +63,7 @@ const About = ({ className }) => {
 				{/* Right — Headshot */}
 				<div className={styles.imageWrapper}>
 					<img
-						src="src/assets/images/headshot.png"
+						src="/headshot.png"
 						alt="Anastasia, Founder and Creative Director of Found Fable"
 						className={styles.image}
 					/>
