@@ -25,8 +25,12 @@ const About = ({ className }) => {
 			<div className={styles.inner}>
 				{/* Left — Text Content */}
 				<div className={styles.content}>
-					<h2 className={styles.heading}>Working With Found Fable</h2>
-
+					<div className={styles.headingBlock}>
+						<span className={styles.kicker} />
+						<h2 className={styles.heading}>
+							Working With Found Fable
+						</h2>
+					</div>
 					<p className={styles.intro}>
 						Hi, I'm Anastasia! ✌️ The Founder and Creative Director
 						behind Found Fable. After many years in the agency
@@ -36,32 +40,33 @@ const About = ({ className }) => {
 						where the story actually comes first, and everything
 						else gets built around it.
 					</p>
-
 					<p className={styles.stepsLabel}>
 						Here's a peek into my storytelling process:
 					</p>
 
-					<ol className={styles.stepsList}>
+					{/* Steps — horizontal trio */}
+					<div className={styles.stepsList}>
 						{steps.map((step) => (
-							<li key={step.id} className={styles.step}>
+							<div key={step.id} className={styles.step}>
+								<span className={styles.stepAccent} />
 								<span className={styles.stepTitle}>
 									{step.title}
 								</span>
 								<span className={styles.stepDescription}>
 									{step.description}
 								</span>
-							</li>
+							</div>
 						))}
-					</ol>
+					</div>
 				</div>
 
 				{/* Right — Headshot */}
 				<div className={styles.imageWrapper}>
-					<div className={styles.imagePlaceholder}>
-						<span className={styles.placeholderText}>
-							Anastasia
-						</span>
-					</div>
+					<img
+						src="src/assets/images/headshot.png"
+						alt="Anastasia, Founder and Creative Director of Found Fable"
+						className={styles.image}
+					/>
 				</div>
 			</div>
 		</section>
