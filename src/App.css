@@ -56,7 +56,7 @@
 
 @font-face {
 	font-family: "TAN Meringue";
-	src: url("./assets/fonts/TAN-MERINGUE-ExtraLight.woff2") format("woff2");
+	src: url("./assets/fonts/TAN-MERINGUE.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -80,7 +80,7 @@ body {
 
 h1,
 h2 {
-	font-family: "TAN Meringue", Georgia, serif;
+	font-family: "TAN Meringue", sans-serif;
 }
 
 h3,

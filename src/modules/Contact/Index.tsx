@@ -35,7 +35,7 @@ const Contact = () => {
 		console.log("Form data:", data);
 
 		// Simulate a short delay for now
-		await new Promise((resolve) => setTimeout(resolve, 800));
+		// await new Promise((resolve) => setTimeout(resolve, 800));
 
 		setSubmitted(true);
 		reset();
