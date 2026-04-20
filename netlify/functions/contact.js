@@ -22,7 +22,7 @@ export const handler = async (event) => {
 		}
 
 		const result = await resend.emails.send({
-			from: "Contact Form <onboarding@resend.dev>", // replace later with your domain
+			from: "Contact Form <hello@foundfablecreative.com>",
 			to: [
 				"bob@foundfablecreative.com",
 				"anastasia@foundfablecreative.com"
