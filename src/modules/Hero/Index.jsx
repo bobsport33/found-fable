@@ -14,11 +14,11 @@ const Hero = ({ className }) => {
 			</div>
 			{/* subtext */}
 			<h2 className={styles.hero__subtitle}>
-				Branding _Copywriting_ Creative Direction
+				Branding • Copywriting • Creative Direction
 			</h2>
 			<h3>
-				Your brand has a story worth telling. I'll help you find it,
-				shape it and make it yours.
+				Your brand has a story worth telling. Let’s find it, shape it
+				and make it yours.
 			</h3>
 			{/* button */}
 			{/* <button>Get in touch</button> */}

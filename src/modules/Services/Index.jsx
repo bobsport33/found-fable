@@ -5,9 +5,9 @@ const services = [
 		id: 1,
 		title: "Brand Creative",
 		subtitle:
-			"You build what you love. For some people that's Legos and fantasy football teams.* But for me, it's all about building brand storylines that connect with the right people.",
+			"You build what you love. For some people that’s Legos and fantasy football teams.* But for me, it’s all about building brand storylines that make people feel like they belong.",
 		footnote:
-			"*I'm much better at naming the teams than I ever was at the football part.",
+			"*I’m much better at naming the teams than I ever was at the football part.",
 		items: [
 			"Campaign concepts",
 			"Tone and voice guidelines",
@@ -20,7 +20,7 @@ const services = [
 		id: 2,
 		title: "Copywriting & Editorial",
 		subtitle:
-			"My bread and butter. Fourteen years of writing for the biggest brands across every category means I can find the right words fast—and make them work hard.",
+			"My bread and butter. Fourteen years of writing for the biggest brands across every category means I can find the right words fast and make them work hard.",
 		footnote: null,
 		items: [
 			"Web copy and content",
@@ -40,6 +40,7 @@ const services = [
 		items: [
 			"Website redesigns (a joint venture with my partner!)",
 			"Digital content strategy",
+			"Ghostwriting",
 			"Onboarding and training materials",
 			"Event planning and design"
 		]
@@ -73,10 +74,9 @@ const Services = ({ className }) => {
 				<div className={styles.header}>
 					<h2 className={styles.heading}>Creative Services</h2>
 					<p className={styles.intro}>
-						New business getting started from scratch? Let's build
-						something together. Established brand needing a creative
-						lead on contract? I can tap right in. Here's what I can
-						do for you:
+						New business getting started from scratch? Or company
+						needing a creative lead on contract? Tap me in. Here's
+						what I can do for you:
 					</p>
 				</div>
 
@@ -91,12 +91,13 @@ const Services = ({ className }) => {
 				<div className={styles.footer}>
 					<p className={styles.footerText}>
 						Don't see what you need? I'm good at a lot of things not
-						listed here (non-profit guides, UX strategy,
-						demystifying marketing buzzwords, knowing every Quizno's
-						jingle ever made).{" "}
-						<span className={styles.highlight}>
+						listed here (non-profit comms guides, UX template
+						strategy, demystifying marketing buzzwords, correcting
+						apostrophe misuse in restaurant menus, Star Wars
+						trivia).{" "}
+						<a className={styles.highlight} href="#contact">
 							Let's talk through it.
-						</span>
+						</a>
 					</p>
 				</div>
 			</div>

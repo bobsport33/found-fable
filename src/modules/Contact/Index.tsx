@@ -59,8 +59,9 @@ const Contact = () => {
 						you, then we get to work!
 					</p>
 					<p className={styles.body}>
-						Looking to add a creative lead to your team? Just get in
-						touch and we'll figure out the details.
+						Just looking to add a creative lead to your team? Send
+						me details about your project and timing, and I’ll be in
+						touch!
 					</p>
 				</div>
 
