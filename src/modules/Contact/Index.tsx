@@ -31,14 +31,25 @@ const Contact = () => {
 	});
 
 	const onSubmit = async (data) => {
-		// TODO: wire up to EmailJS, Formspree or custom endpoint
-		console.log("Form data:", data);
+		try {
+			const res = await fetch("/.netlify/functions/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(data)
+			});
 
-		// Simulate a short delay for now
-		// await new Promise((resolve) => setTimeout(resolve, 800));
+			if (!res.ok) {
+				throw new Error("Failed to send message");
+			}
 
-		setSubmitted(true);
-		reset();
+			setSubmitted(true);
+			reset();
+		} catch (error) {
+			console.error(error);
+			alert("Something went wrong. Please try again.");
+		}
 	};
 
 	return (
