@@ -18,8 +18,8 @@ const work = [
 		company: "DeMasi Strength & Conditioning",
 		pills: ["Brand Design System", "Logo", "Concept Strategy"],
 		cta: "Go behind the scenes",
-		link: "https://demasistrengthtraining.com/",
-		newTab: false
+		link: "/DeMasiBrandPallete.png",
+		newTab: true
 	},
 	{
 		id: 3,
