@@ -22,16 +22,16 @@ const steps = [
 const About = ({ className }) => {
 	return (
 		<section id="Contact" className={`${styles.about} ${className ?? ""}`}>
-			<div className={styles.inner}>
+			<div className={styles.about__inner}>
 				{/* Left — Text Content */}
-				<div className={styles.content}>
-					<div className={styles.headingBlock}>
-						<span className={styles.kicker} />
-						<h2 className={styles.heading}>
+				<div className={styles.about__content}>
+					<div className={styles.about__headingBlock}>
+						<span className={styles.about__kicker} />
+						<h2 className={styles.about__heading}>
 							Working With Found Fable
 						</h2>
 					</div>
-					<p className={styles.intro}>
+					<p className={styles.about__intro}>
 						Hi, I'm Anastasia! ✌️ The Founder and Creative Director
 						behind Found Fable. After many years in the agency
 						world, I've seen great brand stories get lost somewhere
@@ -40,32 +40,30 @@ const About = ({ className }) => {
 						where the story actually comes first, and everything
 						else gets built around it.
 					</p>
-					<p className={styles.stepsLabel}>
+					<p className={styles.about__stepsLabel}>
 						Here's a peek into my storytelling process:
 					</p>
-
 					{/* Steps — horizontal trio */}
-					<div className={styles.stepsList}>
+					<div className={styles.about__stepsList}>
 						{steps.map((step) => (
-							<div key={step.id} className={styles.step}>
-								<span className={styles.stepAccent} />
-								<span className={styles.stepTitle}>
+							<div key={step.id} className={styles.about__step}>
+								<span className={styles.about__stepAccent} />
+								<span className={styles.about__stepTitle}>
 									{step.title}
 								</span>
-								<span className={styles.stepDescription}>
+								<span className={styles.about__stepDescription}>
 									{step.description}
 								</span>
 							</div>
 						))}
 					</div>
 				</div>
-
 				{/* Right — Headshot */}
-				<div className={styles.imageWrapper}>
+				<div className={styles.about__imageWrapper}>
 					<img
 						src="/headshot.png"
 						alt="Anastasia, Founder and Creative Director of Found Fable"
-						className={styles.image}
+						className={styles.about__image}
 					/>
 				</div>
 			</div>

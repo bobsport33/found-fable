@@ -1,199 +1,194 @@
+@use "../../styles/breakpoints" as *;
+
 .contact {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 5rem 2rem;
 	background-color: transparent;
-}
 
-/* ── Inner Layout ── */
-.inner {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
-	align-items: start;
-	background-color: var(--color-neutral-100);
-	border-radius: 10px;
-	padding: 3rem;
-}
+	/* ── Inner Layout ── */
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: start;
+		background-color: var(--color-neutral-100);
+		border-radius: 10px;
+		padding: 3rem;
 
-@media (max-width: 768px) {
-	.inner {
-		grid-template-columns: 1fr;
-		gap: 2.5rem;
+		@include tabletDown {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+			padding: 2rem;
+		}
+	}
+
+	/* ── Copy ── */
+	&__copy {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		position: sticky;
+		top: 2rem;
+
+		@media (max-width: 768px) {
+			position: static;
+		}
+	}
+
+	&__heading {
+		font-size: clamp(1.75rem, 3vw, 2.5rem);
+		color: var(--color-neutral-900);
+		line-height: 1.2;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	&__intro {
+		font-family: "Montserrat", sans-serif;
+		font-size: 1rem;
+		line-height: 1.75;
+		color: var(--color-neutral-700);
+		font-style: italic;
+	}
+
+	&__body {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.75;
+		color: var(--color-neutral-600);
+	}
+
+	/* ── Form Wrapper ── */
+	&__formWrapper {
+		background-color: var(--color-neutral-0);
+		border-radius: 8px;
+		padding: 2.5rem;
+		border: 1px solid var(--color-neutral-200);
+
+		@include tabletDown {
+			padding: 1.5rem;
+		}
+	}
+
+	/* ── Form ── */
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	/* ── Field ── */
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	/* ── Label ── */
+	&__label {
+		font-family: "Gotu", sans-serif;
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		color: var(--color-neutral-700);
+		text-transform: uppercase;
+	}
+
+	&__required {
+		color: var(--color-peach-500);
+	}
+
+	&__optional {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.75rem;
+		color: var(--color-neutral-400);
+		text-transform: none;
+		letter-spacing: 0;
+	}
+
+	/* ── Input & Textarea ── */
+	&__input,
+	&__textarea {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.9rem;
+		color: var(--color-neutral-800);
+		background-color: var(--color-neutral-0);
+		border: 1px solid var(--color-neutral-300);
+		border-radius: 6px;
+		padding: 0.75rem 1rem;
+		transition:
+			border-color 0.2s ease,
+			box-shadow 0.2s ease;
+		width: 100%;
+		outline: none;
+
+		&::placeholder {
+			color: var(--color-neutral-400);
+		}
+
+		&:focus {
+			border-color: var(--color-peach-400);
+			box-shadow: 0 0 0 3px var(--color-peach-100);
+		}
+	}
+
+	&__textarea {
+		resize: vertical;
+		min-height: 120px;
+	}
+
+	/* ── Error Modifier ── */
+	&__input--error,
+	&__textarea--error {
+		border-color: var(--color-peach-500);
+
+		&:focus {
+			border-color: var(--color-peach-600);
+			box-shadow: 0 0 0 3px var(--color-peach-100);
+		}
+	}
+
+	&__errorMessage {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.78rem;
+		color: var(--color-peach-600);
+		margin-top: 0.15rem;
+	}
+
+	/* ── Submit ── */
+	&__submitWrapper {
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 0.5rem;
+	}
+
+	/* ── Success Message ── */
+	&__successMessage {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 1.25rem;
 		padding: 2rem;
+		min-height: 300px;
 	}
-}
 
-/* ── Copy ── */
-.copy {
-	display: flex;
-	flex-direction: column;
-	gap: 1.25rem;
-	position: sticky;
-	top: 2rem;
-}
-
-@media (max-width: 768px) {
-	.copy {
-		position: static;
+	&__successIcon {
+		font-size: 3rem;
 	}
-}
 
-.heading {
-	font-size: clamp(1.75rem, 3vw, 2.5rem);
-	color: var(--color-neutral-900);
-	line-height: 1.2;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-}
-
-.intro {
-	font-family: "Montserrat", sans-serif;
-	font-size: 1rem;
-	line-height: 1.75;
-	color: var(--color-neutral-700);
-	font-style: italic;
-}
-
-.body {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.95rem;
-	line-height: 1.75;
-	color: var(--color-neutral-600);
-}
-
-/* ── Form Wrapper ── */
-.formWrapper {
-	background-color: var(--color-neutral-0);
-	border-radius: 8px;
-	padding: 2.5rem;
-	border: 1px solid var(--color-neutral-200);
-}
-
-@media (max-width: 768px) {
-	.formWrapper {
-		padding: 1.5rem;
+	&__successHeading {
+		font-size: 1.5rem;
+		color: var(--color-neutral-900);
+		letter-spacing: 0.03em;
 	}
-}
 
-/* ── Form ── */
-.form {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-}
-
-/* ── Field ── */
-.field {
-	display: flex;
-	flex-direction: column;
-	gap: 0.4rem;
-}
-
-/* ── Label ── */
-.label {
-	font-family: "Gotu", sans-serif;
-	font-size: 0.85rem;
-	letter-spacing: 0.05em;
-	color: var(--color-neutral-700);
-	text-transform: uppercase;
-}
-
-.required {
-	color: var(--color-peach-500);
-}
-
-.optional {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.75rem;
-	color: var(--color-neutral-400);
-	text-transform: none;
-	letter-spacing: 0;
-}
-
-/* ── Input & Textarea ── */
-.input,
-.textarea {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.9rem;
-	color: var(--color-neutral-800);
-	background-color: var(--color-neutral-0);
-	border: 1px solid var(--color-neutral-300);
-	border-radius: 6px;
-	padding: 0.75rem 1rem;
-	transition:
-		border-color 0.2s ease,
-		box-shadow 0.2s ease;
-	width: 100%;
-	outline: none;
-}
-
-.input::placeholder,
-.textarea::placeholder {
-	color: var(--color-neutral-400);
-}
-
-.input:focus,
-.textarea:focus {
-	border-color: var(--color-peach-400);
-	box-shadow: 0 0 0 3px var(--color-peach-100);
-}
-
-.textarea {
-	resize: vertical;
-	min-height: 120px;
-}
-
-/* ── Error State ── */
-.inputError {
-	border-color: var(--color-peach-500);
-}
-
-.inputError:focus {
-	border-color: var(--color-peach-600);
-	box-shadow: 0 0 0 3px var(--color-peach-100);
-}
-
-.errorMessage {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.78rem;
-	color: var(--color-peach-600);
-	margin-top: 0.15rem;
-}
-
-/* ── Submit ── */
-.submitWrapper {
-	display: flex;
-	justify-content: flex-end;
-	padding-top: 0.5rem;
-}
-
-/* ── Success Message ── */
-.successMessage {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	gap: 1.25rem;
-	padding: 2rem;
-	min-height: 300px;
-}
-
-.successIcon {
-	font-size: 3rem;
-}
-
-.successHeading {
-	font-size: 1.5rem;
-	color: var(--color-neutral-900);
-	letter-spacing: 0.03em;
-}
-
-.successBody {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.95rem;
-	line-height: 1.75;
-	color: var(--color-neutral-600);
-	max-width: 320px;
+	&__successBody {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.75;
+		color: var(--color-neutral-600);
+		max-width: 320px;
+	}
 }

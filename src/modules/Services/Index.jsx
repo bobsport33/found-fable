@@ -48,17 +48,19 @@ const services = [
 ];
 
 const ServiceCard = ({ title, subtitle, footnote, items }) => (
-	<div className={styles.card}>
-		<h3 className={styles.cardTitle}>{title}</h3>
-		<p className={styles.cardSubtitle}>{subtitle}</p>
-		<ul className={styles.itemList}>
+	<div className={styles["service-card"]}>
+		<h3 className={styles["service-card__title"]}>{title}</h3>
+		<p className={styles["service-card__subtitle"]}>{subtitle}</p>
+		<ul className={styles["service-card__itemList"]}>
 			{items.map((item, index) => (
-				<li key={index} className={styles.item}>
+				<li key={index} className={styles["service-card__item"]}>
 					{item}
 				</li>
 			))}
 		</ul>
-		{footnote && <p className={styles.footnote}>{footnote}</p>}
+		{footnote && (
+			<p className={styles["service-card__footnote"]}>{footnote}</p>
+		)}
 	</div>
 );
 
@@ -68,12 +70,13 @@ const Services = ({ className }) => {
 			id="services"
 			className={`${styles.services} ${className ?? ""}`}
 		>
-			{/* Single connected wrapper */}
-			<div className={styles.panel}>
+			<div className={styles.services__panel}>
 				{/* Header */}
-				<div className={styles.header}>
-					<h2 className={styles.heading}>Creative Services</h2>
-					<p className={styles.intro}>
+				<div className={styles.services__header}>
+					<h2 className={styles.services__heading}>
+						Creative Services
+					</h2>
+					<p className={styles.services__intro}>
 						New business getting started from scratch? Or company
 						needing a creative lead on contract? Tap me in. Here's
 						what I can do for you:
@@ -81,21 +84,24 @@ const Services = ({ className }) => {
 				</div>
 
 				{/* Service Cards */}
-				<div className={styles.grid}>
+				<div className={styles.services__grid}>
 					{services.map((service) => (
 						<ServiceCard key={service.id} {...service} />
 					))}
 				</div>
 
-				{/* Footer Line */}
-				<div className={styles.footer}>
-					<p className={styles.footerText}>
+				{/* Footer */}
+				<div className={styles.services__footer}>
+					<p className={styles.services__footerText}>
 						Don't see what you need? I'm good at a lot of things not
 						listed here (non-profit comms guides, UX template
 						strategy, demystifying marketing buzzwords, correcting
 						apostrophe misuse in restaurant menus, Star Wars
 						trivia).{" "}
-						<a className={styles.highlight} href="#contact">
+						<a
+							className={styles.services__highlight}
+							href="#contact"
+						>
 							Let's talk through it.
 						</a>
 					</p>

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import AnimatedBackground from "./components/AnimatedBackground/Index";
 import About from "./modules/About/Index";

@@ -1,144 +1,136 @@
-/* ── Section ── */
+@use "../../styles/breakpoints" as *;
+
 .about {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 80px 24px;
-}
 
-/* ── Inner Layout ── */
-.inner {
-	display: grid;
-	grid-template-columns: 1fr 275px;
-	gap: 5rem;
-	align-items: center;
-	max-width: 80%;
-	width: 100%;
+	/* ── Inner Layout ── */
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 275px;
+		gap: 5rem;
+		align-items: center;
+		max-width: 80%;
+		width: 100%;
+		background-color: var(--color-neutral-100);
+		border-radius: 12px;
+		padding: 3rem;
 
-	background-color: var(--color-neutral-100);
-	border-radius: 12px;
-	padding: 3rem;
-}
-@media (max-width: 960px) {
-	.inner {
-		grid-template-columns: 1fr;
-		gap: 3rem;
+		@include laptopDown {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
 	}
-}
 
-/* ── Text Content ── */
-.content {
-	display: flex;
-	flex-direction: column;
-	gap: 1.25rem;
-}
-
-/* ── Heading Block ── */
-.headingBlock {
-	display: flex;
-	flex-direction: column;
-	gap: 0.6rem;
-}
-
-.kicker {
-	display: block;
-	width: 40px;
-	height: 2px;
-	background-color: var(--color-peach-400);
-}
-
-.heading {
-	font-size: clamp(1.75rem, 3vw, 2.5rem);
-	color: var(--color-neutral-900);
-	line-height: 1.2;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-}
-
-/* ── Body Copy ── */
-.intro {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.95rem;
-	line-height: 1.75;
-	color: var(--color-neutral-700);
-}
-
-.stepsLabel {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.95rem;
-	line-height: 1.75;
-	color: var(--color-neutral-700);
-}
-
-/* ── Steps — horizontal trio ── */
-.stepsList {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 1.5rem;
-	padding-top: 1.25rem;
-	border-top: 1px solid var(--color-neutral-200);
-}
-
-@media (max-width: 580px) {
-	.stepsList {
-		grid-template-columns: 1fr;
+	/* ── Text Content ── */
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
 	}
-}
 
-.step {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-}
+	/* ── Heading Block ── */
+	&__headingBlock {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
 
-.stepAccent {
-	display: block;
-	width: 24px;
-	height: 2px;
-	background-color: var(--color-peach-400);
-}
+	&__kicker {
+		display: block;
+		width: 40px;
+		height: 2px;
+		background-color: var(--color-peach-400);
+	}
 
-.stepTitle {
-	font-family: "Gotu", sans-serif;
-	font-size: 1rem;
-	font-weight: 700;
-	color: var(--color-peach-500);
-	letter-spacing: 0.03em;
-}
+	&__heading {
+		font-size: clamp(1.75rem, 3vw, 2.5rem);
+		color: var(--color-neutral-900);
+		line-height: 1.2;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
 
-.stepDescription {
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.85rem;
-	line-height: 1.6;
-	color: var(--color-neutral-600);
-}
+	/* ── Body Copy ── */
+	&__intro {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.75;
+		color: var(--color-neutral-700);
+	}
 
-/* ── Image ── */
-.imageWrapper {
-	width: 100%;
-	border-radius: 8px;
-	overflow: hidden;
-	box-shadow:
-		0 4px 20px rgba(0, 0, 0, 0.08),
-		0 1px 4px rgba(0, 0, 0, 0.04);
+	&__stepsLabel {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.75;
+		color: var(--color-neutral-700);
+	}
 
-	/* Warm border that complements the salmon tones in the photo */
-	border: 6px solid var(--color-peach-100);
-	outline: 1px solid var(--color-peach-200);
-}
+	/* ── Steps — horizontal trio ── */
+	&__stepsList {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--color-neutral-200);
 
-.image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: top;
-	display: block;
-}
+		@include tabletDown {
+			grid-template-columns: 1fr;
+		}
+	}
 
-/* ── Mobile: image moves above text ── */
-@media (max-width: 960px) {
-	.imageWrapper {
-		max-width: 320px;
-		margin: 0 auto;
+	&__step {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	&__stepAccent {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: var(--color-peach-400);
+	}
+
+	&__stepTitle {
+		font-family: "Gotu", sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--color-peach-500);
+		letter-spacing: 0.03em;
+	}
+
+	&__stepDescription {
+		font-family: "Montserrat", sans-serif;
+		font-size: 0.85rem;
+		line-height: 1.6;
+		color: var(--color-neutral-600);
+	}
+
+	/* ── Image ── */
+	&__imageWrapper {
+		width: 100%;
+		border-radius: 8px;
+		overflow: hidden;
+		box-shadow:
+			0 4px 20px rgba(0, 0, 0, 0.08),
+			0 1px 4px rgba(0, 0, 0, 0.04);
+		border: 6px solid var(--color-peach-100);
+		outline: 1px solid var(--color-peach-200);
+
+		@include laptopDown {
+			max-width: 320px;
+			margin: 0 auto;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top;
+		display: block;
 	}
 }

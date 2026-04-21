@@ -9,7 +9,7 @@ const work = [
 		company: "Primary Source Brooklyn",
 		pills: ["Brand Voice", "Founder Narrative", "Store Communications"],
 		cta: "Meet the brand",
-		link: "https://primarysource.nyc/?srsltid=AfmBOorsTK3ddviQa5KgbugYl3ASuesNDW7eWC2yvc9DT8C4Hsu8V3pJ",
+		link: "https://primarysource.nyc/...",
 		newTab: true
 	},
 	{
@@ -32,7 +32,7 @@ const work = [
 				"Nordstrom",
 				"Harley-Davidson",
 				"City of Chicago Public Health",
-				"McDonald’s",
+				"McDonald's",
 				"Converse",
 				"Nicklaus Children's Hospital",
 				"TransUnion",
@@ -61,40 +61,48 @@ const WorkItem = ({
 
 	return (
 		<div
-			className={`${styles.workItem} ${isEven ? styles.even : styles.odd}`}
+			className={`${styles["work-item"]} ${isEven ? styles["work-item--even"] : styles["work-item--odd"]}`}
 		>
-			{/* Image / Placeholder */}
-			<div className={styles.imageWrapper}>
-				<img className={styles.image} src={image} alt={company} />
+			{/* Image */}
+			<div className={styles["work-item__imageWrapper"]}>
+				<img
+					className={styles["work-item__image"]}
+					src={image}
+					alt={company}
+				/>
 			</div>
 
 			{/* Content */}
-			<div className={styles.content}>
-				<h3 className={styles.company}>{company}</h3>
+			<div className={styles["work-item__content"]}>
+				<h3 className={styles["work-item__company"]}>{company}</h3>
 
-				{/* Pills — only renders if pills exist */}
+				{/* Pills */}
 				{pills && pills.length > 0 && (
-					<ul className={styles.pillList}>
+					<ul className={styles["work-item__pillList"]}>
 						{pills.map((pill, i) => (
-							<li key={i} className={styles.pill}>
+							<li key={i} className={styles["work-item__pill"]}>
 								{pill}
 							</li>
 						))}
 					</ul>
 				)}
 
-				{/* Client List — only renders if clientList exists */}
+				{/* Client List */}
 				{clientList && (
-					<div className={styles.clientList}>
-						<p className={styles.clientHeadline}>
+					<div className={styles["work-item__clientList"]}>
+						<p className={styles["work-item__clientHeadline"]}>
 							{clientList.headline}
 						</p>
-						<p className={styles.clients}>
+						<p className={styles["work-item__clients"]}>
 							{clientList.clients.map((client, i) => (
 								<span key={i}>
 									{client}
 									{i < clientList.clients.length - 1 && (
-										<span className={styles.separator}>
+										<span
+											className={
+												styles["work-item__separator"]
+											}
+										>
 											,{" "}
 										</span>
 									)}
@@ -109,7 +117,7 @@ const WorkItem = ({
 					href={link}
 					target={newTab ? "_blank" : "_self"}
 					rel={newTab ? "noreferrer noopener" : undefined}
-					className={styles.ctaLink}
+					className={styles["work-item__ctaLink"]}
 				>
 					<Button variant="secondary" theme="peach">
 						{cta} →
@@ -122,14 +130,16 @@ const WorkItem = ({
 
 const PreviousWork = () => {
 	return (
-		<section className={`section ${styles.previousWork}`}>
+		<section className={`section ${styles["previous-work"]}`}>
 			{/* Header */}
-			<div className={styles.header}>
-				<h2 className={styles.heading}>Previous Work</h2>
+			<div className={styles["previous-work__header"]}>
+				<h2 className={styles["previous-work__heading"]}>
+					Previous Work
+				</h2>
 			</div>
 
 			{/* Work Items */}
-			<div className={styles.workList}>
+			<div className={styles["previous-work__workList"]}>
 				{work.map((item, index) => (
 					<WorkItem key={item.id} {...item} index={index} />
 				))}

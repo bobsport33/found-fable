@@ -54,37 +54,41 @@ const Contact = () => {
 
 	return (
 		<section className={`section ${styles.contact}`} id="contact">
-			<div className={styles.inner}>
+			<div className={styles.contact__inner}>
 				{/* ── Left: Copy ── */}
-				<div className={styles.copy}>
-					<h2 className={styles.heading}>Let's Work Together</h2>
-					<p className={styles.intro}>
+				<div className={styles.contact__copy}>
+					<h2 className={styles.contact__heading}>
+						Let's Work Together
+					</h2>
+					<p className={styles.contact__intro}>
 						Building something great is always more fun with the
 						right person (slash creative director slash hype squad
 						slash karaoke partner) in your corner.
 					</p>
-					<p className={styles.body}>
+					<p className={styles.contact__body}>
 						Got a brand that needs a voice? Building one from
 						scratch? Here's how it works: we start with a creative
 						consult, I put together a plan that's custom built for
 						you, then we get to work!
 					</p>
-					<p className={styles.body}>
+					<p className={styles.contact__body}>
 						Just looking to add a creative lead to your team? Send
-						me details about your project and timing, and I’ll be in
+						me details about your project and timing, and I'll be in
 						touch!
 					</p>
 				</div>
 
 				{/* ── Right: Form or Success ── */}
-				<div className={styles.formWrapper}>
+				<div className={styles.contact__formWrapper}>
 					{submitted ? (
-						<div className={styles.successMessage}>
-							<span className={styles.successIcon}>✌️</span>
-							<h3 className={styles.successHeading}>
+						<div className={styles.contact__successMessage}>
+							<span className={styles.contact__successIcon}>
+								✌️
+							</span>
+							<h3 className={styles.contact__successHeading}>
 								Message sent!
 							</h3>
-							<p className={styles.successBody}>
+							<p className={styles.contact__successBody}>
 								Thanks for reaching out! I'll be in touch soon
 								to start building something great together.
 							</p>
@@ -98,55 +102,68 @@ const Contact = () => {
 						</div>
 					) : (
 						<form
-							className={styles.form}
+							className={styles.contact__form}
 							onSubmit={handleSubmit(onSubmit)}
 							noValidate
 						>
 							{/* Name */}
-							<div className={styles.field}>
-								<label className={styles.label} htmlFor="name">
+							<div className={styles.contact__field}>
+								<label
+									className={styles.contact__label}
+									htmlFor="name"
+								>
 									Name{" "}
-									<span className={styles.required}>*</span>
+									<span className={styles.contact__required}>
+										*
+									</span>
 								</label>
 								<input
 									id="name"
 									type="text"
-									className={`${styles.input} ${errors.name ? styles.inputError : ""}`}
+									className={`${styles.contact__input} ${errors.name ? styles["contact__input--error"] : ""}`}
 									placeholder="Your name"
 									{...register("name")}
 								/>
 								{errors.name && (
-									<p className={styles.errorMessage}>
+									<p className={styles.contact__errorMessage}>
 										{errors.name.message}
 									</p>
 								)}
 							</div>
 
 							{/* Email */}
-							<div className={styles.field}>
-								<label className={styles.label} htmlFor="email">
+							<div className={styles.contact__field}>
+								<label
+									className={styles.contact__label}
+									htmlFor="email"
+								>
 									Email{" "}
-									<span className={styles.required}>*</span>
+									<span className={styles.contact__required}>
+										*
+									</span>
 								</label>
 								<input
 									id="email"
 									type="email"
-									className={`${styles.input} ${errors.email ? styles.inputError : ""}`}
+									className={`${styles.contact__input} ${errors.email ? styles["contact__input--error"] : ""}`}
 									placeholder="your@email.com"
 									{...register("email")}
 								/>
 								{errors.email && (
-									<p className={styles.errorMessage}>
+									<p className={styles.contact__errorMessage}>
 										{errors.email.message}
 									</p>
 								)}
 							</div>
 
 							{/* Phone */}
-							<div className={styles.field}>
-								<label className={styles.label} htmlFor="phone">
+							<div className={styles.contact__field}>
+								<label
+									className={styles.contact__label}
+									htmlFor="phone"
+								>
 									Phone
-									<span className={styles.optional}>
+									<span className={styles.contact__optional}>
 										{" "}
 										(optional)
 									</span>
@@ -154,43 +171,45 @@ const Contact = () => {
 								<input
 									id="phone"
 									type="tel"
-									className={styles.input}
+									className={styles.contact__input}
 									placeholder="Your phone number"
 									{...register("phone")}
 								/>
 							</div>
 
 							{/* Message */}
-							<div className={styles.field}>
+							<div className={styles.contact__field}>
 								<label
-									className={styles.label}
+									className={styles.contact__label}
 									htmlFor="message"
 								>
 									What's on your mind?{" "}
-									<span className={styles.required}>*</span>
+									<span className={styles.contact__required}>
+										*
+									</span>
 								</label>
 								<textarea
 									id="message"
-									className={`${styles.textarea} ${errors.message ? styles.inputError : ""}`}
+									className={`${styles.contact__textarea} ${errors.message ? styles["contact__textarea--error"] : ""}`}
 									placeholder="Tell me about your brand, project or idea..."
 									rows={5}
 									{...register("message")}
 								/>
 								{errors.message && (
-									<p className={styles.errorMessage}>
+									<p className={styles.contact__errorMessage}>
 										{errors.message.message}
 									</p>
 								)}
 							</div>
 
 							{/* Karaoke */}
-							<div className={styles.field}>
+							<div className={styles.contact__field}>
 								<label
-									className={styles.label}
+									className={styles.contact__label}
 									htmlFor="karaoke"
 								>
 									What's your favorite karaoke song?
-									<span className={styles.optional}>
+									<span className={styles.contact__optional}>
 										{" "}
 										(optional)
 									</span>
@@ -198,14 +217,14 @@ const Contact = () => {
 								<input
 									id="karaoke"
 									type="text"
-									className={styles.input}
+									className={styles.contact__input}
 									placeholder="Don't be shy..."
 									{...register("karaoke")}
 								/>
 							</div>
 
 							{/* Submit */}
-							<div className={styles.submitWrapper}>
+							<div className={styles.contact__submitWrapper}>
 								<Button
 									type="submit"
 									variant="primary"
