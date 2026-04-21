@@ -20,6 +20,7 @@
 		@include laptopDown {
 			grid-template-columns: 1fr;
 			gap: 3rem;
+			max-width: 90%;
 		}
 	}
 

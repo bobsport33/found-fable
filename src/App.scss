@@ -1,3 +1,4 @@
+@use "./styles/breakpoints" as *;
 :root {
 	--color-neutral-0: #f4f6f5;
 	--color-neutral-100: #e6e9e8;
@@ -113,4 +114,8 @@ p {
 	display: flex;
 	flex-direction: column;
 	gap: 200px;
+
+	@include tabletDown {
+		gap: 100px;
+	}
 }
