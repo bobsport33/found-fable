@@ -16,7 +16,7 @@ const Hero = ({ className }) => {
 			<h2 className={styles.hero__subtitle}>
 				Branding • Copywriting • Creative Direction
 			</h2>
-			<h3>
+			<h3 className={styles.hero__text}>
 				Your brand has a story worth telling. Let’s find it, shape it
 				and make it yours.
 			</h3>

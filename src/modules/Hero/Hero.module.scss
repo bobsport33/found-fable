@@ -12,9 +12,43 @@
 		height: auto;
 		width: 500px;
 
+		@include laptopDown {
+			width: 350px;
+		}
+
+		@include mobile {
+			width: 80%;
+		}
+
 		& svg {
 			width: 100%;
 			height: 100%;
+		}
+	}
+
+	&__subtitle {
+		font-size: 1.5rem;
+
+		@include laptopDown {
+			font-size: 1.2rem;
+		}
+
+		@include mobile {
+			font-size: 1rem;
+		}
+	}
+
+	&__text {
+		font-size: 1.17rem;
+
+		@include laptopDown {
+			max-width: 85%;
+			text-align: center;
+			font-size: 1rem;
+		}
+
+		@include mobile {
+			font-size: 0.875rem;
 		}
 	}
 }

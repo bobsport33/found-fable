@@ -4,7 +4,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 80px 24px;
 
 	/* ── Inner Layout ── */
 	&__inner {
@@ -12,7 +11,7 @@
 		grid-template-columns: 1fr 275px;
 		gap: 5rem;
 		align-items: center;
-		max-width: 80%;
+		max-width: 85%;
 		width: 100%;
 		background-color: var(--color-neutral-100);
 		border-radius: 12px;
