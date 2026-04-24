@@ -9,7 +9,7 @@ const work = [
 		company: "Primary Source Brooklyn",
 		pills: ["Brand Voice", "Founder Narrative", "Store Communications"],
 		cta: "Meet the brand",
-		link: "https://primarysource.nyc/...",
+		link: "https://primarysource.nyc/",
 		newTab: true
 	},
 	{
