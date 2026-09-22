@@ -14,11 +14,11 @@ const work = [
 	},
 	{
 		id: 2,
-		image: "/DeMasiStrength.png",
-		company: "DeMasi Strength & Conditioning",
-		pills: ["Brand Design System", "Logo", "Concept Strategy"],
-		cta: "Go behind the scenes",
-		link: "/DeMasiBrandPallete.png",
+		image: "/Time&Target.webp",
+		company: "TIME100 x Target",
+		pills: ["Editorial", "Copywriting", "Branded Content"],
+		cta: "Read the article",
+		link: "https://time.com/branded-content/target/how-target-backs-growing-brands/?utm_source=linkedin&utm_medium=paidsocial&utm_campaign=target",
 		newTab: true
 	},
 	{
